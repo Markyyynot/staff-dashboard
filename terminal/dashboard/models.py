@@ -20,3 +20,11 @@ class TripSchedule(models.Model):
 
     def __str__(self):
         return f"{self.destination} - {self.departure_time.strftime('%Y-%m-%d %H:%M')}"
+
+class RegisteredDriver(models.Model):
+    name = models.CharField(max_length=100)
+    contact = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='drivers/', blank=True, null=True)
+
+    def __str__(self):
+        return self.name
