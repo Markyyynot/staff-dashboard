@@ -23,4 +23,5 @@ urlpatterns = [
     path('', views.dashboard, name='dashboard'),  # Main staff dashboard with modals
     path('driver-registration/', views.driver_registration, name='driver_registration'),
     path('trip-schedule/', views.trip_schedule, name='trip_schedule'),
+    
 ]

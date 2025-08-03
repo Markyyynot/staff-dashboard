@@ -49,12 +49,11 @@
   </button>
 
   <!-- TRIP SCHEDULE -->
-  <a href="{% url 'trip_schedule' %}">
-    <button style="background-color: #0d0d3e;"
-      class="bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-700 hover:from-cyan-400 hover:to-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300 text-sm tracking-wide">
-      TRIP<br>SCHEDULE
-    </button>
-  </a>
+
+  <button onclick="toggleTripScheduleModal()"style="background-color: #0d0d3e;"
+    class="bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-700 hover:from-cyan-400 hover:to-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300 text-sm tracking-wide">
+    TRIP<br>SCHEDULE
+  </button>
     <!-- Push logout to far right -->
     <div class="ml-auto">
  <button
@@ -95,6 +94,7 @@
 
 {% include 'driver_modal.html' %}
 {% include 'ticketing_modal.html' %}
+{% include 'trip_schedule.html' %}
 
 
 
@@ -109,5 +109,9 @@ function toggleTicketingModal() {
   const modal = document.getElementById('ticketingModal');
   modal.classList.toggle('hidden');
 }
+  function toggleTripScheduleModal() {
+    const modal = document.getElementById('tripScheduleModal');
+    modal.classList.toggle('hidden');
+  }
 </script>
 </html>
